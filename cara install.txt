@@ -1,0 +1,12 @@
+1. hidupkan buka xampp
+2. buat database dengan nama skripsi
+3. pilih database yang sudah dibuat(skripsi), kemudian import database ke xampp, skripsi.sql
+4. buat folder di htdoc dengan nama skripsi
+5. buka browser dengan localhost/skripsi
+6. login ada 3, admin, admin
+		administrator, administrator
+		pendi, pendi
+		dosen, dosen
+7. Enjoy. . .
+8. masih eror? call me atau cod bawa ayam mekdi haha. . .
+9. gada kuota? / pulsa? DL :V
