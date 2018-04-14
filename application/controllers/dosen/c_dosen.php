@@ -20,7 +20,10 @@ class C_dosen extends MY_Controller{
 
   public function index()
   {
-    $this->load->view('dosen/home');
+
+    $isi['content']   ='dosen/tampilan_content';
+    
+    $this->load->view('dosen/home', $isi);
   }
 }
 ?>
