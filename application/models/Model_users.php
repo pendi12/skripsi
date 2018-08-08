@@ -38,27 +38,26 @@
       $query=$this->db->query("SELECT *FROM user ORDER BY nama ASC");
       return $query->result();
     }
-    function delete_user($id){
-      $query=$this->db->query("DELETE FROM USER WHERE id='$id'");
+    function delete_user($username){
+      $query=$this->db->query("DELETE FROM USER WHERE username='$username'");
     }
-    function edit_user($id)
+    function edit_user($username)
     {
-        $q="SELECT * FROM  user WHERE id='$id'";
+        $q="SELECT * FROM  user WHERE username='$username'";
         $query=$this->db->query($q);
         return $query->row();
     }
  
-    function simpan_edit_user($id, $nama, $username, $password, $level, $active)
+    function simpan_edit_user( $nama, $username, $password, $level, $active)
     {
         $data = array(
-            'id'             => $id,
             'nama'           => $nama,
             'username'       => $username,
             'password'       => $password,
             'level'          => $level,     
             'active'         => $active
         );
-        $this->db->where('id', $id);
+        $this->db->where('username', $username);
         $this->db->update('user', $data);    
     }
 }

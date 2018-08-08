@@ -33,18 +33,14 @@
 		    ?>
 		</td>
 		<td>
-			<?=anchor('admin/c_admin/edit_user/'.$row->id,'Edit',['class'=>'btn btn-primary btn-sm']);?>
-			<?=anchor('admin/c_admin/delete_user/'.$row->id,'Hapus',['class'=>'btn btn-danger btn-sm','onclick'=>'return confirm(\'anda yakin hapus data ini?\')']); ?>
+			<?=anchor('admin/c_admin/edit_user/'.$row->username,'Edit',['class'=>'btn btn-primary btn-sm']);?>
+			<?=anchor('admin/c_admin/delete_user/'.$row->username,'Hapus',['class'=>'btn btn-danger btn-sm','onclick'=>'return confirm(\'anda yakin hapus data ini?\')']); ?>
 		</td>
 	</tr>
 		<?php } ?>
 </tbody>
 </table>
-<script type>
-	$(document).ready( function () {
-    $('#myTable').DataTable();
-} );
-</script>
+
 
 
 	
@@ -68,7 +64,7 @@
 					  </div>
 					  <div class="form-group">
 					    <label>Username</label>
-					    <input type="text" name="username" class="form-control" placeholder="Username" required>
+					    <input type="text" name="username" class="form-control" placeholder="Username('kode guru' / 'nisn')" required>
 					  </div>
 					  <div class="form-group">
 					    <label>Password</label>
@@ -79,9 +75,9 @@
 					  	<label>Level</label>
 					  	<select class="form-control" name="level" required>
 					  		<option value="">-- pilih --</option>
-					  		<option value="mahasiswa">Mahasiswa</option>
+					  		<option value="siswa">Siswa</option>
+					  		<option value="guru">Guru</option>
 					  		<option value="admin">Admin</option>
-					  		<option value="dosen">Dosen</option>
 					  	</select>
 					  </div>
 					  <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>

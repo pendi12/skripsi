@@ -39,9 +39,8 @@ class Auth extends CI_Controller
   {
     //melakukan pengalihan halaman sesuai dengan levelnya
     if ($this->session->userdata('level') == "admin"){redirect('admin/c_admin');}
-    if ($this->session->userdata('level') == "mahasiswa"){redirect('mhs/c_mhs');}
-    elseif ($this->session->userdata('level') == "adminstrator"){redirect('administrator/c_administrator');}
-    elseif ($this->session->userdata('level') == "dosen"){redirect('dosen/c_dosen');}
+    if ($this->session->userdata('level') == "siswa"){redirect('siswa/c_siswa');}
+    elseif ($this->session->userdata('level') == "guru"){redirect('guru/c_guru');}
 
     //proses login dan validasi nya
     if ($this->input->post('submit')) {
@@ -56,14 +55,12 @@ class Auth extends CI_Controller
         if($data->level == 'admin'){
           redirect('admin/c_admin');
         }
-        else if($data->level == 'mahasiswa'){
-          redirect('mhs/c_mhs');
+        else if($data->level == 'siswa'){
+          redirect('siswa/c_siswa');
         }
-        else if($data->level == 'administrator'){
-          redirect('administrator/c_administrator');
-        }
-        else if($data->level == 'dosen'){
-          redirect('dosen/c_dosen');
+        
+        else if($data->level == 'guru'){
+          redirect('guru/c_guru');
         }
       }
 
